@@ -9,6 +9,10 @@ use App\Models\City;
 
 class RajaongkirSearch extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt.auth');
+    }
     public function province(Request $request)
     {
         $provinces = Province::getData();
