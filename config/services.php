@@ -12,7 +12,7 @@ return [
     | default location for this type of information, allowing packages
     | to have a conventional place to find your various credentials.
     |
-    */
+ */
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -39,5 +39,11 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
     ],
+    'rajaongkir' => [
+        'base_uri' => env('RAJAONGKIR_BASE_URI', 'https://api.rajaongkir.com'),
+        'type' => env('RAJAONGKIR_type', 'starter'),
+        'key' => env('RAJAONGKIR_API_KEY', null),
+        'origin' => env('RAJAONGKIR_ORIGIN'), // if you have fixed origin city id,
+    ]
 
 ];
