@@ -1,11 +1,14 @@
-# laravel-rest-boilerplate
-My boilerplate for REST API using laravel
+## Installation
+* clone this repo
+* run composer install in root project
+* copy .env.example to .env
+* run command `php artisan jwt:secret`
+* run migrate
 
 ## Endpoint
-* [x] Login
-* [x] Logout
-* [x] Signup
-* [ ] Forget password
+* [x] Login/ `api/auth/login`
+
+
 
 ## Package
 * [x] [dingo/api](https://github.com/dingo/api)
