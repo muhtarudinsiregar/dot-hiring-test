@@ -2,11 +2,20 @@
 * clone this repo
 * run composer install in root project
 * copy .env.example to .env
+* set your rajaongkir api token in .env
 * run command `php artisan jwt:secret`
-* run migrate
+* run migrate `php artisan migrate:fresh --seed`
+* run rajaongkir command to get data `php artisan rajaongkir:fetch`
 
 ## Endpoint
-* [x] Login/ `api/auth/login`
+* `api/auth/login`
+    * untuk login, menggunakan email, password('secret') dari table user
+
+* `api/v1/search/provinces`
+    * params : ?province_id=1
+
+* `api/v1/search/cities`
+    * params : ?city_id=427
 
 
 
