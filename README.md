@@ -7,7 +7,16 @@
 * run migrate `php artisan migrate:fresh --seed`
 * run rajaongkir command to get data `php artisan rajaongkir:fetch`
 
+## Usage
+* Get token : `localhost:8000/api/auth/login`
+
+* request to endpoint who need authentication
+```php
+Authorization : Bearer <token>
+```
+
 ## Endpoint
+
 * `api/auth/login`
     * untuk login, menggunakan email, password('secret') dari table user
 
