@@ -20,4 +20,10 @@ $api->version('v1', function ($api) {
         $api->POST('logout', 'App\Http\Controllers\AuthController@logout');
         $api->POST('register', 'App\Http\Controllers\RegisterController@index');
     });
+
+    $api->group(['prefix' => 'v1', 'middleware' => 'bindings'], function ($api) {
+        $api->get('search/provinces', 'App\Http\Controllers\RajaongkirSearch@province');
+        $api->get('search/cities', 'App\Http\Controllers\RajaongkirSearch@city');
+    });
+
 });

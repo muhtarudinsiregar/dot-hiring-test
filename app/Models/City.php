@@ -14,4 +14,15 @@ class City extends Model
         'city_name',
         'postal_code'
     ];
+
+    public function scopeGetData($query)
+    {
+        $params = request('city_id');
+
+        $query->when($params, function ($q) use ($params) {
+            return $q->where('id', $params);
+        });
+
+        return $query->get();
+    }
 }
